@@ -31,4 +31,13 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     els.forEach(function(el){ io.observe(el); });
   }
+
+  /* cursor-tracking spotlight on premium glass panels */
+  document.querySelectorAll(".spot").forEach(function(el){
+    el.addEventListener("pointermove", function(e){
+      var r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      el.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
 })();
