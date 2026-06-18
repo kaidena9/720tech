@@ -31,7 +31,7 @@ body{font-family:var(--f-b);color:var(--ink);line-height:1.6;font-size:16.5px;
     radial-gradient(115% 28% at 16% 27%, rgba(255,138,61,.045), transparent 60%),
     radial-gradient(120% 30% at 58% 68%, rgba(58,112,190,.06), transparent 62%),
     radial-gradient(120% 28% at 48% 90%, rgba(58,112,190,.05), transparent 62%),
-    linear-gradient(180deg, #07111f 0%, #091522 38%, #0a1624 60%, #081421 82%, #07111f 100%);
+    linear-gradient(180deg, #07111f 0%, #07111f 16%, #091522 40%, #0a1624 60%, #081421 84%, #07111f 100%);
   -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer}
 ::selection{background:rgba(255,138,61,.35);color:#fff}
@@ -101,7 +101,9 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    ============================================================ */
 .hero{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(780px,104vh,1140px);
   padding:clamp(160px,18vh,230px) 0 clamp(70px,8vw,110px);
-  background:#07111f url("assets/light/hero-globe-bg-hd.jpg") no-repeat;background-size:auto 120%;background-position:right 14%}
+  background:#07111f url("assets/light/hero-globe-bg-hd.jpg") no-repeat;background-size:auto 120%;background-position:right 14%;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 84%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0,#000 84%,transparent 100%)}
 .hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;
   background:linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.62) 36%, rgba(7,17,31,.12) 60%, transparent 78%, transparent 86%, rgba(7,17,31,.85) 100%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -124,8 +126,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    ============================================================ */
 .sec{position:relative;padding:clamp(72px,9vw,120px) 0}
 .sec-wave{position:absolute;inset:0;z-index:0;overflow:hidden;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%);
-  mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 19%,#000 81%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 19%,#000 81%,transparent 100%)}
 .sec-wave img{width:100%;height:100%;object-fit:cover;opacity:.5;mix-blend-mode:screen}
 .sec-wave::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--bg),transparent 18%,transparent 82%,var(--bg))}
 /* world-map background (Why section): shown normally, with a readability scrim */
@@ -323,8 +325,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .cta{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(540px,72vh,800px);
   padding:clamp(110px,16vh,180px) 0;
   background:url("assets/light/cta-bg.jpg") center center/cover no-repeat;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 13%,#000 88%,transparent 100%);
-  mask-image:linear-gradient(180deg,transparent 0,#000 13%,#000 88%,transparent 100%)}
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 17%,#000 86%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 17%,#000 86%,transparent 100%)}
 .cta-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(ellipse 72% 64% at 50% 50%, rgba(7,17,31,.72), rgba(7,17,31,.4) 58%, transparent 86%),
     linear-gradient(180deg, var(--bg), transparent 18%, transparent 82%, var(--bg))}
