@@ -95,17 +95,17 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    ============================================================ */
 .hero{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(780px,104vh,1140px);
   padding:clamp(160px,18vh,230px) 0 clamp(70px,8vw,110px);
-  background:#07111f url("assets/light/hero-globe-bg.jpg") no-repeat;background-size:auto 108%;background-position:right 14%}
+  background:#07111f url("assets/light/hero-globe-bg-hd.jpg") no-repeat;background-size:auto 108%;background-position:right 14%}
 .hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;
   background:linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.62) 36%, rgba(7,17,31,.12) 60%, transparent 78%, transparent 86%, rgba(7,17,31,.85) 100%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(115% 95% at 50% 45%, transparent 42%, rgba(5,12,22,.7) 80%, rgba(3,8,15,.96) 100%);
   box-shadow:inset 0 -100px 120px -30px rgba(3,8,15,.98), inset 0 90px 110px -35px rgba(3,8,15,.85)}
 .hero-grid{position:relative;z-index:1;display:block;width:100%}
-.hero-copy{max-width:560px}
+.hero-copy{max-width:560px;text-align:center}
 .hero h1{font-size:clamp(2.6rem,5.2vw,4.4rem);font-weight:700;letter-spacing:-.03em;line-height:1.04}
-.hero p{margin-top:20px;color:var(--ink-2);font-size:clamp(1.02rem,1.4vw,1.18rem);max-width:46ch;line-height:1.6}
-.hero-cta{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap}
+.hero p{margin:20px auto 0;color:var(--ink-2);font-size:clamp(1.02rem,1.4vw,1.18rem);max-width:46ch;line-height:1.6}
+.hero-cta{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;justify-content:center}
 .hero-globe{position:relative;justify-self:center}
 .hero-globe img{width:min(560px,92%);margin:0 auto;mix-blend-mode:screen;filter:drop-shadow(0 0 60px rgba(255,140,50,.3));
   animation:spin-slow 70s linear infinite}
