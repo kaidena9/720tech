@@ -64,13 +64,13 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;transition:background .3s,border-color .3s;
   border-bottom:1px solid transparent;background:linear-gradient(to bottom,rgba(7,17,31,.85),rgba(7,17,31,.25) 70%,transparent)}
 .nav.scrolled{background:rgba(7,17,31,.9);backdrop-filter:blur(16px);border-bottom-color:var(--line)}
-.nav-inner{display:flex;align-items:center;gap:24px}
+.nav-inner{display:flex;align-items:center;gap:16px}
 .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--f-d);font-weight:700;font-size:1.16rem;letter-spacing:-.01em;color:#fff}
 .brand .b720{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .brand-mark{width:30px;height:30px;border-radius:9px;position:relative;display:grid;place-items:center;
   background:linear-gradient(155deg,#1a2740,#0a1322);border:1px solid var(--line-2);box-shadow:0 0 18px rgba(255,138,61,.3),inset 0 1px 0 rgba(255,255,255,.14)}
 .brand-mark svg{width:64%;height:64%}
-.nav-links{display:none;align-items:center;gap:28px;margin-left:14px}
+.nav-links{display:none;align-items:center;gap:28px;margin-left:0}
 @media(min-width:900px){.nav-links{display:flex}}
 .nav-links a{font-size:.95rem;font-weight:500;color:var(--ink-2);display:inline-flex;align-items:center;gap:5px;transition:color .2s}
 .nav-links a:hover{color:#fff}
@@ -78,6 +78,11 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .nav-links a.cur::after{content:"";display:block;height:2px;width:18px;background:var(--grad);border-radius:2px;margin-left:6px}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
 .nav-right .btn{padding:9px 16px;border-radius:9px;font-size:.9rem}
+/* desktop: line the Log in / Start trial pair up centered above the hero globe
+   (globe is right-anchored, so we anchor to the right edge and interpolate by width) */
+@media(min-width:900px){
+  .nav-right{position:absolute;right:calc(187px + 9.3vw);top:50%;transform:translateY(-50%);margin-left:0}
+}
 .menu-btn{display:flex;width:42px;height:42px;flex-direction:column;gap:5px;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px}
 @media(min-width:900px){.menu-btn{display:none}}
 .menu-btn span{width:18px;height:2px;background:#fff;border-radius:2px;transition:.25s}
