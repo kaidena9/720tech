@@ -24,6 +24,7 @@
   --wrap:1200px;--pad:24px;--r:18px;--r-lg:24px;--ease:cubic-bezier(.2,.7,.3,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--f-b);color:var(--ink);line-height:1.6;font-size:16.5px;
   background:

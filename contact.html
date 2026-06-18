@@ -136,6 +136,9 @@
 
       function showSuccess(message){
         if (message) successMsg.textContent = message;
+        note.textContent = "";
+        var inv = document.querySelectorAll(".cfield.invalid");
+        for (var i = 0; i < inv.length; i++) inv[i].classList.remove("invalid");
         fieldsWrap.hidden = true;
         success.hidden = false;
       }
