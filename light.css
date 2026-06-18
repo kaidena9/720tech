@@ -8,7 +8,7 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap');
 
 :root{
-  --bg:#000000;
+  --bg:#07122a;
   --panel:#0c0c0f;
   --panel-2:#111115;
   --ink:#ffffff;
@@ -350,7 +350,7 @@ h1,h2,h3,h4{font-weight:800;line-height:1.02;letter-spacing:-.035em}
 /* ============================================================
    FOOTER
    ============================================================ */
-.foot{border-top:1px solid var(--line);padding:clamp(48px,7vw,72px) 0 60px;background:#000}
+.foot{border-top:1px solid var(--line);padding:clamp(48px,7vw,72px) 0 60px;background:var(--bg)}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px}
 .foot-brand .brand{margin-bottom:14px}
 .foot-brand p{color:var(--ink-2);font-size:.95rem;max-width:30ch}
