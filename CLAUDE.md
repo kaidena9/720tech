@@ -1,6 +1,6 @@
-# 720tech — Build Rules
+# 720Tech — Build Rules
 
-**Project:** 720tech — AI-powered freight-intelligence marketing site (dark navy + amber, Satoshi/Hanken Grotesk, glowing 3D imagery, glass UI). Live at https://www.720tech.ai/.
+**Project:** 720Tech — AI-powered freight-intelligence marketing site (dark navy + amber, Satoshi/Hanken Grotesk, glowing 3D imagery, glass UI). Live at https://www.720tech.ai/.
 **Repo:** https://github.com/kaidena9/720tech (origin/main)
 **Active files:** `index.html` + `contact.html` + `site.css` + `app.js`. Imagery in `assets/light/`.
 

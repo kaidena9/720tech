@@ -1,6 +1,6 @@
-# 720tech
+# 720Tech
 
-Marketing site for **720tech** — AI-powered freight intelligence platforms.
+Marketing site for **720Tech** — AI-powered freight intelligence platforms.
 Dark navy + warm amber aesthetic, Satoshi/Hanken Grotesk type, glowing 3D imagery and glass UI.
 
 Live: https://www.720tech.ai/

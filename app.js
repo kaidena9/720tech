@@ -1,4 +1,4 @@
-/* 720tech — nav scroll · mobile menu · scroll reveals · contact form */
+/* 720Tech — nav scroll · mobile menu · scroll reveals · contact form */
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
