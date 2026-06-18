@@ -300,14 +300,12 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .diff2-intro .kick{margin-bottom:14px}
 .diff2-intro h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:700;letter-spacing:-.025em;line-height:1.08;color:#fff}
 .diff2-intro p{margin-top:16px;max-width:40ch;color:var(--ink-2);font-size:1.04rem;line-height:1.6}
-.diff2-visual{position:relative;width:min(380px,94%);aspect-ratio:1;margin-top:clamp(10px,1.6vw,24px)}
-.diff2-visual::before{content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
-  width:118%;height:78%;z-index:-1;pointer-events:none;border-radius:50%;
-  background:radial-gradient(ellipse at 50% 50%,rgba(255,138,61,.1) 0%,rgba(255,138,61,.04) 40%,transparent 70%)}
-.diff2-visual img{position:relative;z-index:1;width:100%;mix-blend-mode:screen;filter:saturate(1.06);
-  -webkit-mask-image:radial-gradient(ellipse 90% 74% at 50% 50%, #000 54%, rgba(0,0,0,.45) 78%, transparent 100%);
-  mask-image:radial-gradient(ellipse 90% 74% at 50% 50%, #000 54%, rgba(0,0,0,.45) 78%, transparent 100%)}
-.diff2-visual .smoke{left:40%;bottom:58%;z-index:2}
+.diff2-visual{position:relative;width:min(380px,94%);margin-top:clamp(10px,1.6vw,24px)}
+.diff2-frame{position:relative;border-radius:20px;overflow:hidden;background:#05090f;
+  border:1px solid rgba(255,138,61,.3);
+  box-shadow:0 30px 72px -34px rgba(0,0,0,.78),0 0 48px -12px rgba(255,138,61,.22),inset 0 1px 0 rgba(255,255,255,.08)}
+.diff2-frame img{display:block;width:100%;filter:saturate(1.06)}
+.diff2-visual .smoke{left:40%;bottom:60%;z-index:3}
 .diff2-visual .smoke i{animation-name:smokeup-s;width:32px;height:32px}
 @keyframes smokeup-s{
   0%{opacity:0;transform:translate(-50%,0) scale(.5)}
@@ -378,6 +376,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   .hero-globe{order:-1}
   .split,.split.rev{grid-template-columns:1fr;gap:34px}
   .split.rev .col-visual{order:0}
+  .build-sphere{position:relative;left:auto;bottom:auto;margin:18px auto 0;width:128px;height:128px}
+  .build-sphere .smoke{display:none}
   .pnodes{grid-template-columns:repeat(2,1fr);gap:26px}
   .ptree-lines{display:none}
   .diff2{grid-template-columns:1fr;gap:36px}
