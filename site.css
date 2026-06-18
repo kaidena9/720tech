@@ -195,10 +195,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    WHY — node ring
    ============================================================ */
 .ring{position:relative;width:min(440px,92%);aspect-ratio:1;margin:0 auto}
-.ring-circle{position:absolute;inset:13%;border:1px dashed rgba(255,255,255,.22);border-radius:50%;opacity:.7;
-  animation:ringspin 44s linear infinite}
-@keyframes ringspin{to{transform:rotate(360deg)}}
-.ring-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;
+.ring-circle{position:absolute;inset:13%;border:1px dashed rgba(255,255,255,.22);border-radius:50%;opacity:.7}
+.ring-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;z-index:3;
   display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(58,160,255,.4),rgba(10,25,50,.6));
   border:1.5px solid rgba(190,224,255,.55);box-shadow:0 0 40px rgba(58,160,255,.35);animation:corepulse 3.4s ease-in-out infinite}
 @keyframes corepulse{
@@ -206,22 +204,23 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   50%{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 64px rgba(58,160,255,.62)}
 }
 .ring-core svg{width:34px;height:34px;color:#bfe0ff}
-.rnode{position:absolute;width:96px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;
+/* slow clockwise orbit; nodes ride the dashed track and stay upright via counter-rotation */
+.ring-orbit{position:absolute;inset:0;animation:orbit-cw 150s linear infinite}
+@keyframes orbit-cw{to{transform:rotate(360deg)}}
+@keyframes orbit-ccw{to{transform:rotate(-360deg)}}
+.rspin{display:flex;flex-direction:column;align-items:center;gap:8px;animation:orbit-ccw 150s linear infinite}
+.ring-orbit:has(.rnode:hover),
+.ring-orbit:has(.rnode:hover) .rspin{animation-play-state:paused}
+.rnode{position:absolute;width:96px;display:flex;flex-direction:column;align-items:center;text-align:center;
   left:50%;top:50%;transform:translate(-50%,-50%)}
 .rnode .rc{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:var(--orange);cursor:pointer;
   border:1.5px solid rgba(255,255,255,.6);
   background:linear-gradient(155deg,rgba(255,255,255,.16),rgba(255,255,255,.03));
   -webkit-backdrop-filter:blur(10px) saturate(1.3);backdrop-filter:blur(10px) saturate(1.3);will-change:transform;
-  animation:pfloat 4.6s ease-in-out infinite;
+  box-shadow:0 8px 26px rgba(0,0,0,.4),0 0 22px rgba(255,138,61,.18),inset 0 1px 0 rgba(255,255,255,.55);
   transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s,background .4s,border-color .4s}
-.rnode.r1 .rc{animation-delay:0s}
-.rnode.r2 .rc{animation-delay:.4s}
-.rnode.r3 .rc{animation-delay:.8s}
-.rnode.r4 .rc{animation-delay:1.2s}
-.rnode.r5 .rc{animation-delay:1.6s}
-.rnode.r6 .rc{animation-delay:2s}
 .rnode .rc svg{width:24px;height:24px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),color .35s,filter .35s}
-.rnode:hover .rc{animation:none;transform:translateY(-10px) scale(1.2);border-color:rgba(255,255,255,.95);
+.rnode:hover .rc{transform:translateY(-10px) scale(1.2);border-color:rgba(255,255,255,.95);
   background:linear-gradient(155deg,rgba(255,255,255,.26),rgba(255,138,61,.14));
   box-shadow:0 22px 52px rgba(255,138,61,.5),0 0 72px rgba(255,138,61,.5),inset 0 1px 0 rgba(255,255,255,.75)}
 .rnode:hover .rc svg{transform:scale(1.12);color:#fff;filter:drop-shadow(0 0 9px rgba(255,176,98,.95))}
