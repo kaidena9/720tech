@@ -361,6 +361,39 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .foot-links a{color:var(--ink-2);font-size:.92rem;transition:color .2s}.foot-links a:hover{color:#fff}
 
 /* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-sec{position:relative;min-height:100vh;display:flex;align-items:center;
+  padding:clamp(130px,18vh,200px) 0 clamp(70px,9vw,110px)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:center}
+.contact-intro h1{font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:700;letter-spacing:-.03em;line-height:1.06;margin:14px 0 16px;color:#fff}
+.contact-intro p{color:var(--ink-2);font-size:1.08rem;line-height:1.6;max-width:46ch}
+.contact-direct{margin-top:22px;font-size:1rem}
+.contact-direct a{color:var(--orange);font-weight:600;border-bottom:1px solid rgba(255,138,61,.4)}
+.contact-direct a:hover{color:#ffb15a}
+.cform{display:flex;flex-direction:column;gap:16px;padding:clamp(24px,3vw,38px);border-radius:22px;
+  border:1px solid rgba(255,255,255,.14);
+  background:radial-gradient(120% 100% at 0% 0%, rgba(255,138,61,.1), transparent 46%),
+    linear-gradient(160deg, rgba(255,255,255,.07), rgba(12,20,36,.55));
+  -webkit-backdrop-filter:blur(20px) saturate(1.2);backdrop-filter:blur(20px) saturate(1.2);
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.14)}
+.cfield{display:flex;flex-direction:column;gap:7px}
+.cfield label{font-size:.82rem;font-weight:600;color:var(--ink-2);letter-spacing:.01em}
+.cfield input,.cfield textarea{width:100%;font:inherit;font-size:.98rem;color:#fff;padding:12px 14px;border-radius:11px;
+  border:1px solid var(--line-2);background:rgba(7,13,24,.6);
+  transition:border-color .25s,box-shadow .25s,background .25s}
+.cfield textarea{resize:vertical;min-height:120px}
+.cfield input:focus,.cfield textarea:focus{outline:none;border-color:rgba(255,138,61,.7);
+  box-shadow:0 0 0 3px rgba(255,138,61,.18);background:rgba(7,13,24,.85)}
+.cform .btn{margin-top:6px;align-self:flex-start}
+.cform-note{font-size:.86rem;color:var(--ink-2);min-height:1.2em}
+.cform-note a{color:var(--orange)}
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:30px}
+  .contact-sec{min-height:auto}
+}
+
+/* ============================================================
    reveal
    ============================================================ */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}

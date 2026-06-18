@@ -1,16 +1,17 @@
 # 720tech
 
-Website for **720tech** — built on the "Light" design system (warm amber sunrise on black,
-bold Hanken Grotesk type, orbiting 3D worlds, AC-style app-icon centerpiece).
+Marketing site for **720tech** — AI-powered freight intelligence platforms.
+Dark navy + warm amber aesthetic, Satoshi/Hanken Grotesk type, glowing 3D imagery and glass UI.
 
-Carried over from the prior build as the starting point; being rebranded and developed for 720tech.
+Live: https://www.720tech.ai/
 
 ## Stack
-- Static HTML / CSS / JS (no framework)
-- `light.css` — active design system
-- `app.js` — nav, mobile menu, scroll reveals
+- Static HTML / CSS / JS (no framework), hosted on GitHub Pages
+- `index.html` — landing page · `contact.html` — contact page
+- `site.css` — design system / all styles
+- `app.js` — nav, mobile menu, scroll reveals, contact form
 - `assets/light/` — generated 3D imagery (KIE / Flux)
-- `tools/` — KIE image generation helpers
+- `tools/` — KIE image generation + upscale helpers
 
 ## Local dev
 ```bash

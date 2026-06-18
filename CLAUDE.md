@@ -1,8 +1,8 @@
 # 720tech — Build Rules
 
-**Project:** 720tech — website built on the "Light" design system (warm amber sunrise on black, Hanken Grotesk, orbiting 3D worlds, app-icon centerpiece). Carried over from the AC Intelligence build as a starting point; being rebranded for 720tech.
+**Project:** 720tech — AI-powered freight-intelligence marketing site (dark navy + amber, Satoshi/Hanken Grotesk, glowing 3D imagery, glass UI). Live at https://www.720tech.ai/.
 **Repo:** https://github.com/kaidena9/720tech (origin/main)
-**Active design:** `light.css` + `index.html` (Light edition) + `app.js`. Imagery in `assets/light/`.
+**Active files:** `index.html` + `contact.html` + `site.css` + `app.js`. Imagery in `assets/light/`.
 
 ## MANDATORY: Skill usage for every build step
 

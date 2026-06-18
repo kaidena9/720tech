@@ -1,4 +1,4 @@
-/* AC Intelligence v2 — nav scroll · mobile menu · scroll reveals */
+/* 720tech — nav scroll · mobile menu · scroll reveals · contact form */
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
