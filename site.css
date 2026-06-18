@@ -174,6 +174,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    SPLIT sections (build / why / cta)
    ============================================================ */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,70px);align-items:center}
+.split>*{min-width:0}
+.dash,.dash-main,.dash-cards{min-width:0;max-width:100%}
 .split.rev .col-visual{order:-1}
 .col-text .kick{margin-bottom:16px}
 .col-text h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;letter-spacing:-.03em;margin-bottom:16px}
@@ -292,7 +294,7 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 /* ============================================================
    DIFFERENT — 4 cards
    ============================================================ */
-.diff{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(40px,5vw,60px)}
+.diff{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:clamp(40px,5vw,60px)}
 .dcard{position:relative;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);
   background:radial-gradient(125% 80% at 0% 0%, rgba(255,138,61,.1), transparent 46%),
     linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.025) 45%,rgba(12,20,36,.45));
@@ -355,6 +357,7 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    RESPONSIVE
    ============================================================ */
 @media (max-width:900px){
+  .nav-right .btn{display:none}
   .hero-grid{grid-template-columns:1fr;gap:30px}
   .hero-globe{order:-1}
   .split,.split.rev{grid-template-columns:1fr;gap:34px}
@@ -374,6 +377,18 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   .diff{grid-template-columns:1fr}
   .pnodes{grid-template-columns:1fr}
   .foot-inner{flex-direction:column;align-items:flex-start}
+}
+/* mobile readability: stop heading clipping, center copy, simplify dashboard */
+@media (max-width:600px){
+  .hero h1{font-size:clamp(1.6rem,6.6vw,2.1rem);text-wrap:normal;line-height:1.12}
+  .hero-copy{transform:none;max-width:100%;width:100%}
+  .hero p{max-width:100%}
+  .head h2,.col-text h2{font-size:clamp(1.4rem,6vw,2rem);text-wrap:normal}
+  .cta-copy{transform:none;max-width:100%;width:100%;margin:0 auto}
+  .cta-copy h2{font-size:clamp(1.6rem,6.6vw,2.2rem);text-wrap:normal}
+  .dash-side{display:none}
+  .dash-body{grid-template-columns:1fr}
+  .dash-cards{grid-template-columns:repeat(2,1fr);gap:8px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition-duration:.001ms!important}
