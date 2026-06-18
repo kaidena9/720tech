@@ -296,11 +296,16 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 /* ============================================================
    CTA (globe left)
    ============================================================ */
-.cta{position:relative;overflow:hidden;padding:clamp(70px,9vw,120px) 0}
-.cta-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;align-items:center}
-.cta-globe img{width:min(460px,92%);margin:0 auto;mix-blend-mode:screen;filter:drop-shadow(0 0 60px rgba(255,140,50,.3));animation:float-y 8s ease-in-out infinite}
+.cta{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(540px,72vh,800px);
+  padding:clamp(110px,16vh,180px) 0;
+  background:#07111f url("assets/light/cta-bg.jpg") center center/cover no-repeat}
+.cta-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 72% 64% at 50% 50%, rgba(7,17,31,.72), rgba(7,17,31,.4) 58%, transparent 86%),
+    linear-gradient(180deg, var(--bg), transparent 18%, transparent 82%, var(--bg))}
+.cta .wrap{position:relative;z-index:1}
+.cta-copy{max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
 .cta-copy h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em}
-.cta-copy .btn{margin-top:26px}
+.cta-copy .btn{margin-top:28px}
 
 /* ============================================================
    FOOTER
@@ -321,8 +326,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
    RESPONSIVE
    ============================================================ */
 @media (max-width:900px){
-  .hero-grid,.cta-grid{grid-template-columns:1fr;gap:30px}
-  .hero-globe,.cta-globe{order:-1}
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero-globe{order:-1}
   .split,.split.rev{grid-template-columns:1fr;gap:34px}
   .split.rev .col-visual{order:0}
   .pnodes{grid-template-columns:repeat(2,1fr);gap:26px}
