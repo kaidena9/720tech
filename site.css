@@ -173,10 +173,12 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .dcardm{border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.03);padding:12px;min-height:74px;display:flex;flex-direction:column;gap:8px}
 .dcardm .ic{width:26px;height:26px;border-radius:7px;background:var(--orange-soft);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--orange)}
 .dcardm .ic svg{width:14px;height:14px}
-.dcardm i{height:6px;border-radius:3px;background:rgba(255,255,255,.08)}
-.dcardm i.s{width:60%}
+.dcardm .dt{font-size:.74rem;font-weight:600;color:#e9f0f8;line-height:1.2;letter-spacing:-.01em}
+.dcardm .dd{font-size:.66rem;color:var(--ink-3);line-height:1.25;margin-top:-2px}
 .build-sphere{position:absolute;left:-46px;bottom:-30px;width:140px;height:140px;z-index:2;pointer-events:none}
-.build-sphere img{width:100%;mix-blend-mode:screen;filter:saturate(1.05)}
+.build-sphere img{width:100%;mix-blend-mode:screen;filter:saturate(1.05);
+  -webkit-mask-image:radial-gradient(circle at 50% 52%,#000 48%,rgba(0,0,0,.55) 68%,transparent 82%);
+  mask-image:radial-gradient(circle at 50% 52%,#000 48%,rgba(0,0,0,.55) 68%,transparent 82%)}
 
 /* ============================================================
    WHY — node ring
