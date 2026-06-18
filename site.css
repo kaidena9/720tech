@@ -179,10 +179,17 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .dash-bar{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}
 .dash-bar .b720{font-family:var(--f-d);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:7px}
 .dash-bar .tab{margin-left:14px;font-size:.72rem;color:var(--ink-3)}
+.dash-logo{margin-left:auto;display:flex;align-items:center}
+.dash-logo svg{width:22px;height:22px;display:block}
 .dash-body{display:grid;grid-template-columns:120px 1fr;min-height:280px}
 .dash-side{border-right:1px solid rgba(255,255,255,.07);padding:14px 12px;display:flex;flex-direction:column;gap:9px;background:rgba(255,255,255,.02)}
-.dash-side i{height:9px;border-radius:4px;background:rgba(255,255,255,.07);display:block}
-.dash-side i:first-child{background:rgba(255,138,61,.4);width:70%}
+.dash-side i{height:9px;border-radius:4px;display:block}
+.dash-side i:nth-child(1){background:rgba(255,138,61,.62);width:70%}
+.dash-side i:nth-child(2){background:rgba(255,152,72,.44);width:100%}
+.dash-side i:nth-child(3){background:rgba(255,118,40,.32);width:86%}
+.dash-side i:nth-child(4){background:rgba(255,168,92,.48);width:94%}
+.dash-side i:nth-child(5){background:rgba(255,130,52,.28);width:78%}
+.dash-side i:nth-child(6){background:rgba(255,146,66,.38);width:96%}
 .dash-main{padding:16px}
 .dash-main h6{font-family:var(--f-d);font-size:.78rem;color:var(--ink-2);margin-bottom:12px;font-weight:600}
 .dash-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -206,12 +213,12 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .dcardm .dt{font-size:.74rem;font-weight:600;color:#e9f0f8;line-height:1.2;letter-spacing:-.01em;position:relative;z-index:1}
 .dcardm .dd{font-size:.66rem;color:var(--ink-3);line-height:1.25;margin-top:-2px;position:relative;z-index:1}
 .build-sphere{position:absolute;left:-46px;bottom:-30px;width:140px;height:140px;z-index:2;pointer-events:none}
-.build-sphere::before{content:"";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
-  width:195%;height:180%;z-index:-1;pointer-events:none;border-radius:50%;
-  background:radial-gradient(ellipse at 50% 48%,rgba(104,116,156,.42),rgba(58,70,102,.2) 46%,transparent 72%)}
+.build-sphere::before{content:"";position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);
+  width:260%;height:240%;z-index:-1;pointer-events:none;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 50%,rgba(6,12,22,.78) 0%,rgba(9,18,32,.5) 30%,rgba(11,21,36,.26) 52%,rgba(11,21,36,.1) 70%,transparent 84%)}
 .build-sphere img{position:relative;z-index:1;width:100%;mix-blend-mode:screen;filter:saturate(1.05);
-  -webkit-mask-image:radial-gradient(circle at 50% 52%,#000 48%,rgba(0,0,0,.55) 68%,transparent 82%);
-  mask-image:radial-gradient(circle at 50% 52%,#000 48%,rgba(0,0,0,.55) 68%,transparent 82%)}
+  -webkit-mask-image:radial-gradient(circle at 50% 55%,#000 26%,rgba(0,0,0,.7) 48%,rgba(0,0,0,.32) 68%,rgba(0,0,0,.12) 80%,transparent 92%);
+  mask-image:radial-gradient(circle at 50% 55%,#000 26%,rgba(0,0,0,.7) 48%,rgba(0,0,0,.32) 68%,rgba(0,0,0,.12) 80%,transparent 92%)}
 /* continuous looping exhaust smoke rising from the truck */
 .smoke{position:absolute;left:60px;bottom:100px;width:30px;height:0;z-index:0;pointer-events:none}
 .smoke i{position:absolute;left:50%;bottom:0;width:44px;height:44px;border-radius:50%;
