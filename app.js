@@ -32,6 +32,15 @@
     els.forEach(function(el){ io.observe(el); });
   }
 
+  /* differentiator cards: click / keyboard to flip */
+  document.querySelectorAll(".dcard").forEach(function(card){
+    function flip(){ card.classList.toggle("flipped"); }
+    card.addEventListener("click", flip);
+    card.addEventListener("keydown", function(e){
+      if (e.key === "Enter" || e.key === " "){ e.preventDefault(); flip(); }
+    });
+  });
+
   /* cursor-tracking spotlight on premium glass panels */
   document.querySelectorAll(".spot").forEach(function(el){
     el.addEventListener("pointermove", function(e){
