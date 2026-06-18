@@ -303,8 +303,9 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   background:radial-gradient(ellipse 72% 64% at 50% 50%, rgba(7,17,31,.72), rgba(7,17,31,.4) 58%, transparent 86%),
     linear-gradient(180deg, var(--bg), transparent 18%, transparent 82%, var(--bg))}
 .cta .wrap{position:relative;z-index:1}
-.cta-copy{max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
-.cta-copy h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.cta-copy{max-width:540px;margin:0 auto;margin-left:clamp(8px,4vw,72px);text-align:center;
+  display:flex;flex-direction:column;align-items:center;transform:translateY(-46px)}
+.cta-copy h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em;text-wrap:balance}
 .cta-copy .btn{margin-top:28px}
 
 /* ============================================================
