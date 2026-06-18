@@ -137,6 +137,10 @@ h1,h2,h3,h4{font-weight:800;line-height:1.02;letter-spacing:-.035em}
    ============================================================ */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;overflow:hidden;padding:120px 0 80px}
+.hero-map{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("assets/light/hero-map.jpg") center/cover no-repeat;
+  transform-origin:center;animation:hero-map-zoom 42s ease-in-out infinite alternate}
+@keyframes hero-map-zoom{from{transform:scale(1.02)}to{transform:scale(1.09)}}
 .hero-glow{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:min(1500px,150vw);height:min(1500px,150vw);
   background:radial-gradient(58% 50% at 50% 50%, rgba(255,252,245,1) 0%, rgba(255,239,205,.97) 10%, rgba(255,205,116,.78) 25%, rgba(255,142,46,.42) 41%, rgba(150,65,12,.14) 56%, transparent 72%);
   pointer-events:none;z-index:0;animation:glowPulse 7s ease-in-out infinite}
