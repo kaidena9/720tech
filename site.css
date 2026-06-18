@@ -120,6 +120,11 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .sec-wave{position:absolute;inset:0;z-index:0;overflow:hidden}
 .sec-wave img{width:100%;height:100%;object-fit:cover;opacity:.5;mix-blend-mode:screen}
 .sec-wave::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--bg),transparent 18%,transparent 82%,var(--bg))}
+/* world-map background (Why section): shown normally, with a readability scrim */
+.sec-map img{opacity:.66;mix-blend-mode:normal;object-position:55% center}
+.sec-map::after{background:
+  linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.64) 30%, rgba(7,17,31,.2) 54%, rgba(7,17,31,.34) 100%),
+  linear-gradient(180deg, var(--bg) 0%, transparent 15%, transparent 80%, var(--bg) 100%)}
 .sec .wrap{position:relative;z-index:1}
 .head{max-width:760px;margin:0 auto;text-align:center}
 .head .kick{margin-bottom:16px}
