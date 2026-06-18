@@ -108,8 +108,9 @@ h1,h2,h3,h4{font-weight:800;line-height:1.02;letter-spacing:-.035em}
 /* ============================================================
    NAV
    ============================================================ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(0,0,0,.72);backdrop-filter:blur(16px);border-bottom-color:var(--line)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;
+  background:linear-gradient(to bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,.38) 58%, transparent 100%);text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.nav.scrolled{background:rgba(0,0,0,.78);backdrop-filter:blur(16px);border-bottom-color:var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:inline-flex;align-items:center;gap:15px;font-family:'Satoshi',var(--f);font-weight:600;font-size:1.2rem;letter-spacing:.02em;color:#fff}
 .brand .ac{margin-right:.06em}
@@ -142,7 +143,7 @@ h1,h2,h3,h4{font-weight:800;line-height:1.02;letter-spacing:-.035em}
   transform-origin:center;animation:hero-map-zoom 42s ease-in-out infinite alternate}
 @keyframes hero-map-zoom{from{transform:scale(1.02)}to{transform:scale(1.09)}}
 .hero-glow{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:min(1500px,150vw);height:min(1500px,150vw);
-  background:radial-gradient(58% 50% at 50% 50%, rgba(255,252,245,1) 0%, rgba(255,239,205,.97) 10%, rgba(255,205,116,.78) 25%, rgba(255,142,46,.42) 41%, rgba(150,65,12,.14) 56%, transparent 72%);
+  background:radial-gradient(58% 50% at 50% 50%, rgba(255,250,240,.76) 0%, rgba(255,235,200,.7) 10%, rgba(255,200,110,.52) 25%, rgba(255,142,46,.28) 41%, rgba(150,65,12,.1) 56%, transparent 72%);
   pointer-events:none;z-index:0;animation:glowPulse 7s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.09);opacity:1}}
 /* layered starfield — each layer twinkles at its own pace */
