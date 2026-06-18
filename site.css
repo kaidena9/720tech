@@ -93,8 +93,8 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 /* ============================================================
    HERO
    ============================================================ */
-.hero{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(580px,86vh,860px);
-  padding:clamp(110px,14vh,160px) 0 clamp(60px,8vw,100px);
+.hero{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(690px,96vh,1000px);
+  padding:clamp(150px,17vh,210px) 0 clamp(70px,8vw,110px);
   background:#07111f url("assets/light/hero-globe-bg.jpg") right center/cover no-repeat}
 .hero-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;
   background:linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.62) 36%, rgba(7,17,31,.12) 62%, transparent 80%)}
