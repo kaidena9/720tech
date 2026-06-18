@@ -168,11 +168,12 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 .blist li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--grad);margin-top:8px;flex:none;box-shadow:0 0 10px rgba(255,138,61,.5)}
 
 /* dashboard mock */
-.dash-wrap{position:relative}
-.dash{position:relative;border:1px solid rgba(255,255,255,.14);border-radius:16px;overflow:hidden;
-  background:linear-gradient(155deg,rgba(255,255,255,.085),rgba(255,255,255,.02) 42%,rgba(12,20,36,.5));
+.dash-wrap{position:relative;animation:dashfloat 7.5s ease-in-out infinite}
+@keyframes dashfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.dash{position:relative;border:1px solid rgba(255,255,255,.18);border-radius:16px;overflow:hidden;
+  background:linear-gradient(155deg,rgba(255,255,255,.1),rgba(255,255,255,.025) 42%,rgba(12,20,36,.52));
   -webkit-backdrop-filter:blur(22px) saturate(1.25);backdrop-filter:blur(22px) saturate(1.25);
-  box-shadow:0 44px 110px -40px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.16)}
+  box-shadow:0 75px 150px -35px rgba(0,0,0,.9),0 30px 64px -22px rgba(0,0,0,.62),0 0 70px -10px rgba(96,116,160,.2),inset 0 1px 0 rgba(255,255,255,.22)}
 .dash::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;z-index:2;
   background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 32%)}
 .dash-bar{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}
