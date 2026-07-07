@@ -3,3 +3,6 @@
 .env
 *.key
 .kie*
+
+# local Claude Code config
+.claude/

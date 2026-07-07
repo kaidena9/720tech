@@ -4,16 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | 720Tech</title>
-  <meta name="description" content="Talk to 720Tech about your freight operation. Tell us about your lanes, systems, and where decisions get stuck — we'll get back to you fast." />
+  <meta name="description" content="Talk to 720Tech about your freight operation. Tell us about your lanes, systems, and where decisions get stuck, and we'll get back to you fast." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.720tech.ai/contact.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="720Tech" />
   <meta property="og:title" content="Contact | 720Tech" />
-  <meta property="og:description" content="Talk to 720Tech about your freight operation — we'll get back to you fast." />
+  <meta property="og:description" content="Talk to 720Tech about your freight operation, and we'll get back to you fast." />
   <meta property="og:url" content="https://www.720tech.ai/contact.html" />
-  <meta property="og:image" content="https://www.720tech.ai/assets/light/globe-hd.jpg" />
-  <link rel="icon" href="assets/logomark.svg" type="image/svg+xml" />
+  <meta property="og:image" content="https://www.720tech.ai/assets/light/hero-2026.jpg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="stylesheet" href="site.css" />
@@ -29,21 +34,23 @@
         <span><span class="b720">720</span>Tech</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html#what">Platform</a>
-        <a href="index.html#build">Solutions</a>
+        <a href="index.html#build">Platform</a>
+        <a href="index.html#why">Security</a>
+        <a href="index.html#different">Why 720Tech</a>
         <a class="cur" href="contact.html">Contact</a>
       </nav>
       <div class="nav-right">
-        <a class="btn btn-orange" href="contact.html">Get in touch</a>
+        <a class="btn btn-orange" href="contact.html">Book a walkthrough</a>
         <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
   <div class="mobile" id="mobile" hidden>
-    <a href="index.html#what">Platform</a>
-    <a href="index.html#build">Solutions</a>
+    <a href="index.html#build">Platform</a>
+    <a href="index.html#why">Security</a>
+    <a href="index.html#different">Why 720Tech</a>
     <a href="contact.html">Contact</a>
-    <a class="btn btn-orange" href="contact.html">Get in touch</a>
+    <a class="btn btn-orange" href="contact.html">Book a walkthrough</a>
   </div>
 
   <main id="main">
@@ -52,7 +59,12 @@
         <div class="contact-intro reveal">
           <span class="kick">Contact</span>
           <h1>Let's talk about your platform.</h1>
-          <p>Tell us about your freight operation — your lanes, the systems you run, and where decisions get stuck. We'll get back to you fast.</p>
+          <p>Tell us about your freight operation: your lanes, the systems you run, and where decisions get stuck.</p>
+          <ul class="contact-steps">
+            <li>A reply within one business day, from someone who knows freight</li>
+            <li>A short call to see if 720Tech fits how you already work</li>
+            <li>A walkthrough on your data, not a canned demo</li>
+          </ul>
           <p class="contact-direct">Prefer to just email? <a href="mailto:hello@720tech.ai">hello@720tech.ai</a></p>
         </div>
 
@@ -96,8 +108,8 @@
       </a>
       <nav class="foot-links" aria-label="Footer">
         <a href="index.html#main">Home</a>
-        <a href="index.html#what">About</a>
-        <a href="index.html#build">Docs</a>
+        <a href="index.html#build">Platform</a>
+        <a href="index.html#why">Security</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -162,7 +174,7 @@
 
         var name = val("cf-name"), email = val("cf-email"),
             company = val("cf-company"), message = val("cf-msg");
-        var subject = "Platform inquiry — " + name + (company ? " (" + company + ")" : "");
+        var subject = "Platform inquiry: " + name + (company ? " (" + company + ")" : "");
 
         if (ACCESS_KEY){
           var btn = form.querySelector("button[type=submit]");
@@ -172,18 +184,18 @@
             headers: { "Content-Type": "application/json", "Accept": "application/json" },
             body: JSON.stringify({
               access_key: ACCESS_KEY, subject: subject,
-              name: name, email: email, company: company || "—", message: message
+              name: name, email: email, company: company || "Not provided", message: message
             })
           }).then(function(r){ return r.json(); }).then(function(d){
             if (d.success){ showSuccess("We'll respond within 24 hours."); }
-            else { btn.disabled = false; note.innerHTML = "Couldn't send automatically — email us at <a href=\"mailto:hello@720tech.ai\">hello@720tech.ai</a>."; }
+            else { btn.disabled = false; note.innerHTML = "Couldn't send automatically. Email us at <a href=\"mailto:hello@720tech.ai\">hello@720tech.ai</a>."; }
           }).catch(function(){
-            btn.disabled = false; note.innerHTML = "Couldn't send automatically — email us at <a href=\"mailto:hello@720tech.ai\">hello@720tech.ai</a>.";
+            btn.disabled = false; note.innerHTML = "Couldn't send automatically. Email us at <a href=\"mailto:hello@720tech.ai\">hello@720tech.ai</a>.";
           });
         } else {
-          var body = ["Name: " + name, "Email: " + email, "Company: " + (company || "—"), "", message].join("\n");
+          var body = ["Name: " + name, "Email: " + email, "Company: " + (company || "Not provided"), "", message].join("\n");
           window.location.href = "mailto:hello@720tech.ai?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-          showSuccess("Your email app is opening — hit send and it lands in our inbox.");
+          showSuccess("Your email app is opening. Hit send and it lands in our inbox.");
         }
       });
     })();
