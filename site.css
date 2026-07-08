@@ -200,9 +200,15 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   transition:transform .95s var(--ease),opacity .6s var(--ease)}
 .seam-draw.in::before{opacity:.4;transform:scaleX(1)}
 /* lifted zones — brighter navy + a soft top light for depth and life */
-#what,#why{background:
+#what{background:
   radial-gradient(120% 82% at 50% 0%, rgba(96,134,196,.12), transparent 56%),
   var(--band-raise)}
+/* security zone: golden-hour container port photo (matches the hero's palette),
+   scrimmed left-to-right so the heading column stays fully readable */
+#why{background:
+  linear-gradient(97deg, rgba(7,17,29,.88) 0%, rgba(7,17,29,.7) 38%, rgba(7,17,29,.18) 72%, rgba(7,17,29,.34) 100%),
+  linear-gradient(180deg, rgba(7,17,29,.45), transparent 24%, transparent 76%, rgba(7,17,29,.6)),
+  #07111d url("assets/light/why-port.jpg") no-repeat center 38%/cover}
 #different{background:
   radial-gradient(120% 82% at 50% 0%, rgba(96,134,196,.08), transparent 58%),
   var(--band-warm)}
@@ -324,19 +330,31 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
 }
 
 /* ============================================================
-   WHY — security & trust grid
+   WHY — security review ledger (single glass panel over the port photo)
    ============================================================ */
-.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.tcard{display:flex;flex-direction:column;gap:10px;padding:22px 20px;border-radius:16px;
-  border:1px solid var(--line);
-  background:radial-gradient(130% 130% at 0% 0%, rgba(255,138,61,.035), transparent 46%), var(--panel);
-  transition:transform .3s var(--ease),border-color .3s,background .3s}
-.tcard:hover{transform:translateY(-4px);border-color:rgba(255,138,61,.32);background:radial-gradient(130% 130% at 0% 0%, rgba(255,138,61,.06), transparent 46%), var(--panel-2)}
-.tcard-ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--orange);
+.ledger{border:1px solid rgba(255,255,255,.16);border-radius:18px;overflow:hidden;
+  background:linear-gradient(160deg, rgba(13,22,38,.86), rgba(8,15,27,.9));
+  -webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);
+  box-shadow:0 44px 96px -38px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.12)}
+.ledger-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.ledger-title{font-family:var(--f-b);font-size:.78rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-2)}
+.ledger-status{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;
+  color:#7fdca4;padding:5px 12px;border-radius:999px;
+  border:1px solid rgba(82,196,128,.32);background:rgba(62,168,106,.12)}
+.ledger-status svg{width:13px;height:13px}
+.lrow{display:flex;align-items:center;gap:15px;padding:15px 20px}
+.lrow+.lrow{border-top:1px solid rgba(255,255,255,.07)}
+.lrow-ic{flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;color:var(--orange);
   border:1px solid var(--line-2);background:var(--orange-soft)}
-.tcard-ic svg{width:20px;height:20px}
-.tcard b{font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.01em}
-.tcard span{font-size:.86rem;color:var(--ink-2);line-height:1.45}
+.lrow-ic svg{width:19px;height:19px}
+.lrow-text{min-width:0}
+.lrow-text b{display:block;font-size:.98rem;font-weight:700;color:#fff;letter-spacing:-.01em;line-height:1.25}
+.lrow-text span{display:block;font-size:.86rem;color:var(--ink-2);line-height:1.45;margin-top:2px}
+.lrow-check{flex:none;margin-left:auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+  color:#7fdca4;border:1px solid rgba(82,196,128,.3);background:rgba(62,168,106,.1)}
+.lrow-check svg{width:12px;height:12px}
 
 /* ============================================================
    DIFFERENT — 4 cards
@@ -497,6 +515,10 @@ h1,h2,h3,h4{font-family:var(--f-d);font-weight:700;line-height:1.05;letter-spaci
   /* pan the lane-map variant to the Americas network (harmless in photo variants) */
   .hero-art svg{width:400%;margin-left:-50%}
   .split,.split.rev{grid-template-columns:1fr;gap:34px}
+  /* stacked layout puts text over the brighter part of the port photo — even the scrim out */
+  #why{background:
+    linear-gradient(180deg, rgba(7,17,29,.93) 0%, rgba(7,17,29,.82) 55%, rgba(7,17,29,.9) 100%),
+    #07111d url("assets/light/why-port.jpg") no-repeat center 38%/cover}
   .split.rev .col-visual{order:0}
   .build-sphere{position:relative;left:auto;bottom:auto;margin:18px auto 0;width:128px;height:128px}
   .build-sphere .smoke{display:none}
